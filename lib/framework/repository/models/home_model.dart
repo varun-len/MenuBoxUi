@@ -116,6 +116,7 @@ class Store {
   String? deliveryTime;
   String? distance;
   Offer? offer;
+  bool? isFavourite;
 
   Store({
     this.id,
@@ -129,6 +130,7 @@ class Store {
     this.deliveryTime,
     this.distance,
     this.offer,
+    this.isFavourite,
   });
 
   factory Store.fromJson(Map<String, dynamic> json) => Store(
@@ -143,6 +145,7 @@ class Store {
     deliveryTime: json["delivery_time"],
     distance: json["distance"],
     offer: json["offer"] == null ? null : Offer.fromJson(json["offer"]),
+    isFavourite: json["isFavourite"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -157,6 +160,7 @@ class Store {
     "delivery_time": deliveryTime,
     "distance": distance,
     "offer": offer?.toJson(),
+    "isFavourite": isFavourite,
   };
 }
 

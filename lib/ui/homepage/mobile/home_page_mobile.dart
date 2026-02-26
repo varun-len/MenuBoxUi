@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kodytest/framework/controllers/home_controller/home_controller.dart';
 import 'package:kodytest/ui/homepage/helper/all_stores_card.dart';
+import 'package:kodytest/ui/homepage/helper/category_helper.dart';
 import 'package:kodytest/ui/homepage/helper/recent_card.dart';
+import 'package:kodytest/ui/homepage/helper/stores_section.dart';
 import 'package:kodytest/util/app_constants.dart';
-import 'package:kodytest/util/themes/app_colors.dart';
 import 'package:kodytest/util/widgets/card_offers.dart';
 import 'package:kodytest/util/widgets/carousel_slider.dart';
 import 'package:kodytest/util/widgets/custom_text.dart';
 import 'package:kodytest/util/widgets/customized_appbar.dart';
 
-class HomePageMobile extends StatefulWidget {
+import '../helper/category_section.dart';
+
+class HomePageMobile extends ConsumerStatefulWidget {
   const HomePageMobile({super.key});
 
   @override
-  State<HomePageMobile> createState() => _HomePageMobileState();
+  ConsumerState<HomePageMobile> createState() => _HomePageMobileState();
 }
 
-class _HomePageMobileState extends State<HomePageMobile> {
+class _HomePageMobileState extends ConsumerState<HomePageMobile> {
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final baseHomeController = ref.watch(homePageChangeNotifierProvider);
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(4.0),
@@ -27,7 +33,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           children: [
             CustomizedAppbar(),
             SizedBox(height: 20),
-            ResponsiveCarousel(imageUrls: HomePageController.modelBanner),
+            ResponsiveCarousel(),
             SizedBox(height: 10),
             CustomText(
               text: str_categories,
@@ -35,41 +41,10 @@ class _HomePageMobileState extends State<HomePageMobile> {
               fontWeight: FontWeight.bold,
             ),
             SizedBox(height: 10),
-            GridView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: HomePageController.modelCategory.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20,
-                childAspectRatio: 1, // square cells for balance
-              ),
-              itemBuilder: (context, index) {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 75,
-                      // fixed size for circle
-                      height: 75,
-                      decoration: BoxDecoration(shape: BoxShape.circle),
-                      clipBehavior: Clip.antiAlias,
-                      child: Image.network(
-                        HomePageController.modelCategory[index].image ?? '',
-                        fit: BoxFit.cover, // ensures proper fitting
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Text(
-                      HomePageController.modelCategory[index].name ?? '',
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                );
-              },
-            ),
-            SizedBox(height: 20),
+            //----------------------------------------------Category Section------------------------------------------------------------
+            CategorySection(width: width),
+
+            //----------------------------------------------Stores Section------------------------------------------------------------
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomText(
@@ -81,23 +56,11 @@ class _HomePageMobileState extends State<HomePageMobile> {
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 120, // give fixed height for horizontal list
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: HomePageController.stores?.length ?? 0,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: RecentCard(index: index),
-                    );
-                  },
-                ),
-              ),
+              child:StoresSection(),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
+
+            //----------------------------------------------existing Offers Section------------------------------------------------------------
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: Row(
@@ -116,13 +79,13 @@ class _HomePageMobileState extends State<HomePageMobile> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
+
+            //----------------------------------------------offers Section------------------------------------------------------------
             ResponsiveCarouselExcitingOffers(),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
+
+            //----------------------------------------------Spotlight Section------------------------------------------------------------
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: Row(
@@ -148,7 +111,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                 height: 129, // give fixed height for horizontal list
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: HomePageController.spotlight?.length ?? 0,
+                  itemCount: baseHomeController.spotlight?.length ?? 0,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -166,13 +129,15 @@ class _HomePageMobileState extends State<HomePageMobile> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Image.network(
-                                HomePageController.spotlight?[index].image ?? '',
+                                baseHomeController.spotlight?[index].image ??
+                                    '',
                               ),
                             ),
                             SizedBox(height: 10),
                             CustomText(
                               text:
-                              HomePageController.spotlight?[index].name ?? '',
+                                  baseHomeController.spotlight?[index].name ??
+                                  '',
                             ),
                           ],
                         ),
@@ -183,6 +148,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
               ),
             ),
             SizedBox(height: 20),
+            //----------------------------------------------All Stores Section------------------------------------------------------------
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomText(
@@ -196,13 +162,15 @@ class _HomePageMobileState extends State<HomePageMobile> {
               padding: const EdgeInsets.all(8.0),
               child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount:HomePageController.stores?.length, itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AllStoresCard(index: index),
-                    );
-              }),
+                shrinkWrap: true,
+                itemCount: baseHomeController.stores?.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: AllStoresCard(index: index),
+                  );
+                },
+              ),
             ),
           ],
         ),

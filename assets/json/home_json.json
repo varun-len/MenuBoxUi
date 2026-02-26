@@ -1,279 +1,287 @@
 {
-"banner": [
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq3Im0JActfK4TR9QXXvOgnO3pHOBwZfK3sQ&s",
-"https://marketplace.canva.com/EAFI53BMsJA/2/0/1600w/canva-grey-brown-modern-simple-professional-pizza-promotion-banner-8nY9y2vuaAA.jpg",
-"https://img.freepik.com/free-vector/flat-design-fast-food-sale-banner_23-2149165450.jpg",
-"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/orange-minimalist-food-banner-landscape-design-template-329eef60fb6af6296bc83193d826379c_screen.jpg?ts=1712154657"
-],
-"categories": [
-{
-"id": 234,
-"name": "Pizza",
-"image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
-},
-{
-"id": 894,
-"name": "Biryani",
-"image": "https://png.pngtree.com/png-clipart/20240508/original/pngtree-top-view-biriyani-on-a-round-wood-plate-transparent-background-png-image_15035437.png"
-},
-{
-"id": 234,
-"name": "Burger",
-"image": "https://m.media-amazon.com/images/I/71DCZ-I6agL._AC_UF894,1000_QL80_.jpg"
-},
-{
-"id": 454,
-"name": "Chicken",
-"image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
-},
-{
-"id": 26,
-"name": "North Indian",
-"image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
-},
-{
-"id": 892,
-"name": "Chinese",
-"image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
-}
-],
-"recent_orders": [
-{
-"id": 234,
-"name": "MC Donalds",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 456,
-"name": "Subway",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 687,
-"name": "Burger King",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 124,
-"name": "Pizza Hut",
-"image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png"
-}
-],
-"existing_offers": [
-{
-"id": 893,
-"name": "Domino's",
-"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png",
-"subtitle": "Cheesy Pizza",
-"offer_title": "Buy 1 cheesy pizza & get 1 free",
-"isOpen": true
-},
-{
-"id": 3453,
-"name": "Subway",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"subtitle": "Breadstick",
-"offer_title": "Buy 1 breadstick & get 1 coke free",
-"isOpen": true
-},
-{
-"id": 563,
-"name": "Burger King",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"subtitle": "Chicken burger",
-"offer_title": "Buy 2 chicken burger & get 2 coke free",
-"isOpen": true
-},
-{
-"id": 756,
-"name": "Domino's",
-"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png",
-"subtitle": "Spicy Pizza",
-"offer_title": "Buy 1 large spicy pizza & get 1 small pizza free",
-"isOpen": false
-},
-{
-"id": 567,
-"name": "Pizza Hut",
-"image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png",
-"subtitle": "Mexican pizza",
-"offer_title": "Buy 2 mexican pizza & get 1 free",
-"isOpen": true
-},
-{
-"id": 9023,
-"name": "Shakti",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"subtitle": "Italian sandwich",
-"offer_title": "Buy 1 italian sandwich & get 1 soft drink",
-"isOpen": true
-},
-{
-"id": 1209,
-"name": "Pizza Hut",
-"image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png",
-"subtitle": "Veg pizza",
-"offer_title": "Buy 1 extra large pizza & get 1 small pizza free",
-"isOpen": false
-},
-{
-"id": 4793,
-"name": "Shakti",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"subtitle": "Sandwich",
-"offer_title": "Buy any 1 sandwich & get 1 free",
-"isOpen": true
-}
-],
-"spotlight": [
-{
-"id": 234,
-"name": "MC Donalds",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 456,
-"name": "Subway",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 687,
-"name": "Burger King",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 124,
-"name": "Pizza Hut",
-"image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png"
-},
-{
-"id": 1243,
-"name": "Domino's",
-"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png"
-},
-{
-"id": 5323,
-"name": "Shakti",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-},
-{
-"id": 849,
-"name": "KFC",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
-}
-],
-"stores": [
-{
-"id": 832,
-"name": "MC Donalds",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
-"rating": "2.5",
-"review": "40",
-"min_order": "1000",
-"free_delivery_km": "12",
-"delivery_time": "30-35 Mins",
-"distance": "2 Kms",
-"offer": {
-"title": "Get 15% off on softdrinnks",
-"code": "NEW15"
-}
-},
-{
-"id": 8411,
-"name": "Subway",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"banner": "https://images.squarespace-cdn.com/content/v1/5cb6357234c4e2d5d6120415/8094207a-97ec-4db2-a604-826fd58d55d8/Subway+banner.jpg",
-"rating": "4.5",
-"review": "600",
-"min_order": "600",
-"free_delivery_km": "5",
-"delivery_time": "30-35 Mins",
-"distance": "7 Kms",
-"offer": {
-"title": "Get 20% off on breadstick",
-"code": "BRDSTK20"
-}
-},
-{
-"id": 8932,
-"name": "Burger King",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"banner": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/0fdd0e25559501.56347a238b44b.png",
-"rating": "3",
-"review": "230",
-"min_order": "400",
-"free_delivery_km": "3",
-"delivery_time": "30-35 Mins",
-"distance": "2.5 Kms",
-"offer": {
-"title": "Get 15% off on veg burger",
-"code": "VEGBRG15"
-}
-},
-{
-"id": 973,
-"name": "Pizza Hut",
-"image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png",
-"banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
-"rating": "1.3",
-"review": "20",
-"min_order": "250",
-"free_delivery_km": "5",
-"delivery_time": "40-45 Mins",
-"distance": "6.5 Kms",
-"offer": {
-"title": "Get 40% off on veg pizza",
-"code": "VEGPIZZA40"
-}
-},
-{
-"id": 1284,
-"name": "Domino's",
-"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png",
-"banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
-"rating": "4.0",
-"review": "500",
-"min_order": "600",
-"free_delivery_km": "8",
-"delivery_time": "15-25 Mins",
-"distance": "4.5 Kms",
-"offer": {
-"title": "Get 10% off on lava cake",
-"code": "CAKE10"
-}
-},
-{
-"id": 6592,
-"name": "Shakti",
-"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
-"banner": "https://b.zmtcdn.com/data/pictures/chains/2/19295302/e404b3f6d648a736d710ffe11e30f7d4.jpg?fit=around|960:500&crop=960:500",
-"rating": "3.5",
-"review": "378",
-"min_order": "450",
-"free_delivery_km": "8",
-"delivery_time": "20-25 Mins",
-"distance": "5.5 Kms",
-"offer": {
-"title": "Get 15% off on veg sandwich",
-"code": "VEGSANDWICH15"
-}
-},
-{
-"id": 2384,
-"name": "KFC",
-"image": "https://www.hatchwise.com/wp-content/uploads/2024/05/image-10-1024x1024.jpeg",
-"banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
-"rating": "4.2",
-"review": "4200",
-"min_order": "800",
-"free_delivery_km": "6",
-"delivery_time": "35-45 Mins",
-"distance": "2.5 Kms",
-"offer": {
-"title": "Get 15% off on chicken lolipop",
-"code": "CHKLOLIPOP15"
-}
-}
-]
+  "banner": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq3Im0JActfK4TR9QXXvOgnO3pHOBwZfK3sQ&s",
+    "https://marketplace.canva.com/EAFI53BMsJA/2/0/1600w/canva-grey-brown-modern-simple-professional-pizza-promotion-banner-8nY9y2vuaAA.jpg",
+    "https://img.freepik.com/free-vector/flat-design-fast-food-sale-banner_23-2149165450.jpg",
+    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/orange-minimalist-food-banner-landscape-design-template-329eef60fb6af6296bc83193d826379c_screen.jpg?ts=1712154657"
+  ],
+  "categories": [
+    {
+      "id": 234,
+      "name": "Pizza",
+      "image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
+    },
+    {
+      "id": 894,
+      "name": "Biryani",
+      "image": "https://png.pngtree.com/png-clipart/20240508/original/pngtree-top-view-biriyani-on-a-round-wood-plate-transparent-background-png-image_15035437.png"
+    },
+    {
+      "id": 234,
+      "name": "Burger",
+      "image": "https://m.media-amazon.com/images/I/71DCZ-I6agL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 454,
+      "name": "Chicken",
+      "image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
+    },
+    {
+      "id": 26,
+      "name": "North Indian",
+      "image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
+    },
+    {
+      "id": 892,
+      "name": "Chinese",
+      "image": "https://t4.ftcdn.net/jpg/08/36/02/45/360_F_836024580_GMq3eGTwA8WS6JeHUP9I6iT2epmNIINx.jpg"
+    }
+  ],
+  "recent_orders": [
+    {
+      "id": 234,
+      "name": "MC Donalds",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 456,
+      "name": "Subway",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 687,
+      "name": "Burger King",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 124,
+      "name": "Pizza Hut",
+      "image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png"
+    }
+  ],
+  "existing_offers": [
+    {
+      "id": 893,
+      "name": "Domino's",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png",
+      "subtitle": "Cheesy Pizza",
+      "offer_title": "Buy 1 cheesy pizza & get 1 free",
+      "isOpen": true
+    },
+    {
+      "id": 3453,
+      "name": "Subway",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "subtitle": "Breadstick",
+      "offer_title": "Buy 1 breadstick & get 1 coke free",
+      "isOpen": true
+    },
+    {
+      "id": 563,
+      "name": "Burger King",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "subtitle": "Chicken burger",
+      "offer_title": "Buy 2 chicken burger & get 2 coke free",
+      "isOpen": true
+    },
+    {
+      "id": 756,
+      "name": "Domino's",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png",
+      "subtitle": "Spicy Pizza",
+      "offer_title": "Buy 1 large spicy pizza & get 1 small pizza free",
+      "isOpen": false
+    },
+    {
+      "id": 567,
+      "name": "Pizza Hut",
+      "image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png",
+      "subtitle": "Mexican pizza",
+      "offer_title": "Buy 2 mexican pizza & get 1 free",
+      "isOpen": true
+    },
+    {
+      "id": 9023,
+      "name": "Shakti",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "subtitle": "Italian sandwich",
+      "offer_title": "Buy 1 italian sandwich & get 1 soft drink",
+      "isOpen": true
+    },
+    {
+      "id": 1209,
+      "name": "Pizza Hut",
+      "image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png",
+      "subtitle": "Veg pizza",
+      "offer_title": "Buy 1 extra large pizza & get 1 small pizza free",
+      "isOpen": false
+    },
+    {
+      "id": 4793,
+      "name": "Shakti",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "subtitle": "Sandwich",
+      "offer_title": "Buy any 1 sandwich & get 1 free",
+      "isOpen": true
+    }
+  ],
+  "spotlight": [
+    {
+      "id": 234,
+      "name": "MC Donalds",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 456,
+      "name": "Subway",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 687,
+      "name": "Burger King",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 124,
+      "name": "Pizza Hut",
+      "image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png"
+    },
+    {
+      "id": 1243,
+      "name": "Domino's",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png"
+    },
+    {
+      "id": 5323,
+      "name": "Shakti",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    },
+    {
+      "id": 849,
+      "name": "KFC",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s"
+    }
+  ],
+  "stores": [
+    {
+      "id": 832,
+      "name": "MC Donalds",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
+      "rating": "2.5",
+      "review": "40",
+      "min_order": "1000",
+      "free_delivery_km": "12",
+      "delivery_time": "30-35 Mins",
+      "distance": "2 Kms",
+      "offer": {
+        "title": "Get 15% off on softdrinnks",
+        "code": "NEW15"
+      },
+      "isFavourite": false
+    },
+    {
+      "id": 8411,
+      "name": "Subway",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "banner": "https://images.squarespace-cdn.com/content/v1/5cb6357234c4e2d5d6120415/8094207a-97ec-4db2-a604-826fd58d55d8/Subway+banner.jpg",
+      "rating": "4.5",
+      "review": "600",
+      "min_order": "600",
+      "free_delivery_km": "5",
+      "delivery_time": "30-35 Mins",
+      "distance": "7 Kms",
+      "offer": {
+        "title": "Get 20% off on breadstick",
+        "code": "BRDSTK20"
+      },
+      "isFavourite": false
+    },
+    {
+      "id": 8932,
+      "name": "Burger King",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "banner": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/0fdd0e25559501.56347a238b44b.png",
+      "rating": "3",
+      "review": "230",
+      "min_order": "400",
+      "free_delivery_km": "3",
+      "delivery_time": "30-35 Mins",
+      "distance": "2.5 Kms",
+      "offer": {
+        "title": "Get 15% off on veg burger",
+        "code": "VEGBRG15"
+      },
+      "isFavourite": false
+    },
+    {
+      "id": 973,
+      "name": "Pizza Hut",
+      "image": "https://static.stands4.com/images/symbol/2041_pizza-hut-logo.png",
+      "banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
+      "rating": "1.3",
+      "review": "20",
+      "min_order": "250",
+      "free_delivery_km": "5",
+      "delivery_time": "40-45 Mins",
+      "distance": "6.5 Kms",
+      "offer": {
+        "title": "Get 40% off on veg pizza",
+        "code": "VEGPIZZA40"
+
+      },
+      "isFavourite": false
+    },
+    {
+      "id": 1284,
+      "name": "Domino's",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/960px-Dominos_pizza_logo.svg.png",
+      "banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
+      "rating": "4.0",
+      "review": "500",
+      "min_order": "600",
+      "free_delivery_km": "8",
+      "delivery_time": "15-25 Mins",
+      "distance": "4.5 Kms",
+      "offer": {
+        "title": "Get 10% off on lava cake",
+        "code": "CAKE10"
+      },
+      "isFavourite": false
+    },
+    {
+      "id": 6592,
+      "name": "Shakti",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHpFuxfYy_68RR06imHrENexaBx_SbTA7Yg&s",
+      "banner": "https://b.zmtcdn.com/data/pictures/chains/2/19295302/e404b3f6d648a736d710ffe11e30f7d4.jpg?fit=around|960:500&crop=960:500",
+      "rating": "3.5",
+      "review": "378",
+      "min_order": "450",
+      "free_delivery_km": "8",
+      "delivery_time": "20-25 Mins",
+      "distance": "5.5 Kms",
+      "offer": {
+        "title": "Get 15% off on veg sandwich",
+        "code": "VEGSANDWICH15"
+      },
+      "isFavourite": false
+    },
+    {
+      "id": 2384,
+      "name": "KFC",
+      "image": "https://www.hatchwise.com/wp-content/uploads/2024/05/image-10-1024x1024.jpeg",
+      "banner": "https://c8.alamy.com/comp/RE7HRE/pizza-hut-takeaway-restaurant-sign-and-logo-RE7HRE.jpg",
+      "rating": "4.2",
+      "review": "4200",
+      "min_order": "800",
+      "free_delivery_km": "6",
+      "delivery_time": "35-45 Mins",
+      "distance": "2.5 Kms",
+      "offer": {
+        "title": "Get 15% off on chicken lolipop",
+        "code": "CHKLOLIPOP15"
+      },
+      "isFavourite": false
+    }
+  ]
 }

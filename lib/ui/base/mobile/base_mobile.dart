@@ -1,24 +1,22 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kodytest/framework/controllers/base_bottom_navbar/bottom_navbar_controller.dart';
 import 'package:kodytest/util/app_constants.dart';
-import 'package:kodytest/util/widgets/custom_appbar.dart';
 import 'package:kodytest/util/widgets/custom_text.dart';
-import 'package:kodytest/util/widgets/customized_appbar.dart';
 import 'package:kodytest/util/widgets/logout_dialog.dart';
 
-class BaseMobile extends StatefulWidget {
+class BaseMobile extends ConsumerStatefulWidget {
   const BaseMobile({super.key});
 
   @override
-  State<BaseMobile> createState() => _BaseMobileState();
+  ConsumerState<BaseMobile> createState() => _BaseMobileState();
 }
 
-class _BaseMobileState extends State<BaseMobile> {
+class _BaseMobileState extends ConsumerState<BaseMobile> {
   int index = BottomController.selectedIndex;
   @override
   Widget build(BuildContext context) {
+    final bottomNavbarProvider=ref.watch(bottomControllerProvider);
     return Scaffold(
         drawer:Drawer(
           child:SizedBox(
@@ -58,11 +56,7 @@ class _BaseMobileState extends State<BaseMobile> {
           currentIndex:index,
           onTap: (val) {
             index = val;
-            BottomController.selectedIndex=index;
-            for(int i=0;i<BottomController.bottomList.length;i++){
-              BottomController.bottomList[i].isSelected=index==i;
-            }
-            setState(() {});
+            bottomNavbarProvider.setIndex(index);
           },
           items: BottomController.bottomList.map((value){
             return BottomNavigationBarItem(icon: value.iconName,label: value.name);

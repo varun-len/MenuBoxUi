@@ -2,33 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kodytest/framework/controllers/home_controller/home_controller.dart';
 
-class RecentCard extends ConsumerWidget {
+class CategoryHelper extends ConsumerWidget {
   final int index;
-  const RecentCard({super.key, required this.index});
+  final double width;
+  const CategoryHelper({super.key, required this.index, required this.width});
 
   @override
   Widget build(BuildContext context,WidgetRef ref) {
     final baseHomeController=ref.watch(homePageChangeNotifierProvider);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          width: 80,
-          height: 70,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12), // rounded corners
-          ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(50),
           child: Image.network(
-            baseHomeController.stores?[index].image ?? '',
-            fit: BoxFit.cover,
+            baseHomeController.modelCategory[index].image ?? '',
+            fit: BoxFit.cover, // ensures proper fitting
+            width: width*0.22,
+            height: width*0.22,
           ),
         ),
-        SizedBox(height: 8),
+        SizedBox(height: 3),
         Text(
-          baseHomeController.stores?[index].name ?? '',
+          baseHomeController.modelCategory[index].name ?? '',
           textAlign: TextAlign.center,
-          overflow: TextOverflow.ellipsis, // prevent text overflow
         ),
       ],
     );

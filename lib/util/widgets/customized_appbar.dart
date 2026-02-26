@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kodytest/ui/favourite/favourite.dart';
 import 'package:kodytest/util/app_constants.dart';
 import 'package:kodytest/util/themes/app_colors.dart';
 import 'package:kodytest/util/widgets/custom_text.dart';
@@ -30,7 +31,7 @@ class _CustomizedAppbarState extends State<CustomizedAppbar> {
               color: AppColors.clr070707,
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Builder(
                   builder: (context) {
@@ -44,9 +45,7 @@ class _CustomizedAppbarState extends State<CustomizedAppbar> {
                     );
                   },
                 ),
-                SizedBox(
-                  width: 70,
-                ),
+
                 GestureDetector(
                   onTap: () {
                     // Navigator.push(
@@ -77,28 +76,41 @@ class _CustomizedAppbarState extends State<CustomizedAppbar> {
                   ),
                 ),
 
-                Spacer(),
-                Container(
-                  height: 30,
-                  width: 30,
-                  child: SvgPicture.asset(svg_notification),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  height: 30,
-                  width: 30,
-                  child: SvgPicture.asset(svg_favourite),
-                ),
+
+                Row(
+                  children: [
+                    Container(
+                      height: 30,
+                      width: 30,
+                      child: SvgPicture.asset(svg_notification),
+                    ),
+                    SizedBox(width: 10,),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20.0),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Favourite()));
+                        },
+                        child: Container(
+                          height: 30,
+                          width: 30,
+                          child: SvgPicture.asset(svg_favourite),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
           Positioned(
             top: 100,
             left: 28,
+            right: 20,
             child: Card(
               child: Container(
                 height: 50,
-                width: MediaQuery.of(context).size.width*0.75,
+                width: MediaQuery.of(context).size.width-40,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.transparent,

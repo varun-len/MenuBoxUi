@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kodytest/framework/controllers/home_controller/favourite_controller.dart';
 import 'package:kodytest/framework/controllers/home_controller/home_controller.dart';
 import 'package:kodytest/util/themes/app_colors.dart';
 import 'package:kodytest/util/widgets/custom_text.dart';
 
-class AllStoresCard extends ConsumerWidget {
+class FavouriteHelper extends ConsumerStatefulWidget {
   final int index;
-  const AllStoresCard({super.key, required this.index});
+  const FavouriteHelper({super.key, required this.index});
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  ConsumerState<FavouriteHelper> createState() => _FavouriteHelperState();
+}
+
+class _FavouriteHelperState extends ConsumerState<FavouriteHelper> {
+  @override
+  Widget build(BuildContext context) {
     final baseHomeController=ref.watch(homePageChangeNotifierProvider);
     final favController=ref.watch(favouriteListProvider);
-    return Container(
-      height: 215,
+    return  Container(
+      height: 225,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),boxShadow: [
         BoxShadow(
-          color: AppColors.clrGreyShade300,
-          blurRadius: 1,
-          spreadRadius: 0.8
+            color: AppColors.clrGreyShade300,
+            blurRadius: 1,
+            spreadRadius: 0.8
         ),
 
       ],color: Colors.white),
@@ -35,7 +41,7 @@ class AllStoresCard extends ConsumerWidget {
                 ),
                 clipBehavior: Clip.antiAlias,
                 child: Image.network(
-                  baseHomeController.stores?[index].banner ?? '',
+                  favController.favouriteList[widget.index].banner ?? '',
                   fit: BoxFit.cover, // ensures it fills the box
                 ),
               ),
@@ -47,21 +53,21 @@ class AllStoresCard extends ConsumerWidget {
                     width: 40,
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(shape: BoxShape.circle),
-                    child: Image.network(baseHomeController.stores?[index].image ?? '',),
+                    child: Image.network(favController.favouriteList[widget.index].image ?? '',),
                   )),
               Positioned(
                   top: 10,
                   right: 10,
-                  child: InkWell(
+                  child: GestureDetector(
                     onTap: (){
-                       favController.addToFavourite(baseHomeController.stores![index]);
+                      favController.addToFavourite(favController.favouriteList[widget.index]);
                     },
-                     child: Container(
+                    child: Container(
                       height: 30,
                       width: 30,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey.shade300),
-                      child: Icon(Icons.favorite,size: 20,color:(baseHomeController.stores![index].isFavourite??true)?Colors.red:Colors.black,),
+                      decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.black45,border:BoxBorder.all(color: Colors.red)),
+                      child: Icon(Icons.favorite,size: 20,color:(favController.favouriteList[widget.index].isFavourite??true)?Colors.red:Colors.black,),
                     ),
                   ))
             ],
@@ -74,7 +80,7 @@ class AllStoresCard extends ConsumerWidget {
                 children: [
 
                   CustomText(
-                    text: baseHomeController.stores?[index].name??'',
+                    text: favController.favouriteList[widget.index].name??'',
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -95,7 +101,7 @@ class AllStoresCard extends ConsumerWidget {
               children: [
                 Icon(Icons.star,color: Colors.black,size: 16,),
                 CustomText(
-                  text: baseHomeController.stores?[index].rating??'',
+                  text: favController.favouriteList[widget.index].rating??'',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -111,7 +117,7 @@ class AllStoresCard extends ConsumerWidget {
                 Spacer(),
                 Icon(Icons.alarm,size: 16,),
                 CustomText(
-                  text: baseHomeController.stores?[index].deliveryTime??'',
+                  text: favController.favouriteList[widget.index].deliveryTime??'',
                   fontSize: 16,
                   color: AppColors.clrGrey,
                   fontWeight: FontWeight.w800,
@@ -130,7 +136,7 @@ class AllStoresCard extends ConsumerWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 CustomText(
-                  text: baseHomeController.stores?[index].minOrder??'',
+                  text: favController.favouriteList[widget.index].minOrder??'',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -146,7 +152,7 @@ class AllStoresCard extends ConsumerWidget {
                 Spacer(),
                 Icon(Icons.location_pin,size: 16,),
                 CustomText(
-                  text: baseHomeController.stores?[index].distance??'',
+                  text:favController.favouriteList[widget.index].distance??'',
                   fontSize: 16,
                   color: AppColors.clrGrey,
                   fontWeight: FontWeight.w800,
@@ -158,20 +164,23 @@ class AllStoresCard extends ConsumerWidget {
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.green,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12),bottomRight: Radius.circular(12))
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12),bottomRight: Radius.circular(12))
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(baseHomeController.stores?[index].offer?.title??'',style: TextStyle(color: Colors.white),),
-                  Text(baseHomeController.stores?[index].offer?.code??'',style: TextStyle(color: Colors.white)),
+                  Text(favController.favouriteList[widget.index].offer?.title??'',style: TextStyle(color: Colors.white),),
+                  Text(favController.favouriteList[widget.index].offer?.code??'',style: TextStyle(color: Colors.white)),
                 ],
               ),
             ),
+          ),
+          SizedBox(
+            height: 10,
           )
-
         ],
       ),
     );
   }
 }
+
